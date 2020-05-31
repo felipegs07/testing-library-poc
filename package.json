@@ -1,0 +1,33 @@
+{
+  "name": "fest.js",
+  "version": "1.0.0",
+  "description": "A simple proof-of-concept testing framework",
+  "main": "fest.js",
+  "scripts": {
+    "dev": "parcel src/fest.js --out-dir development",
+    "build": "parcel build src/fest.js --out-dir dest --public-url ./",
+    "clean": "rimraf ./development && rimraf -rf ./.cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipegs07/testing-library-poc.git"
+  },
+  "keywords": [
+    "javascript",
+    "testing",
+    "framework"
+  ],
+  "author": "Felipe G.S.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/felipegs07/testing-library-poc/issues"
+  },
+  "homepage": "https://github.com/felipegs07/testing-library-poc#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/runtime-corejs2": "^7.10.2",
+    "parcel-bundler": "^1.12.4",
+    "rimraf": "^3.0.2"
+  }
+}
