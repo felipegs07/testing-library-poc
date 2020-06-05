@@ -6,16 +6,17 @@ This framework is built with vanilla JavaScript and bundled with Parcel/Babel.
 
 ### To do:
   
-- Test truphy  
-  - [ ] toBeOK()
-  - [ ] toNotBeOK()
+- Test truthy  
+  - [x] toBeOK()
+  - [x] toNotBeOK()
 
 - Test equality with ===
   - [x] toBe()
-  - [ ] toNotBe()
+  - [x] toNotBe()
   
 - Test loose equality ==
-  - [ ] toBeEqual()
+  - [x] toBeEqual()
+  - [x] toNotBeEqual()
 
 - Test typeof and instanceof (accepts string types and objects to use istanceof)
   - [ ] toBeType()
@@ -28,7 +29,7 @@ This framework is built with vanilla JavaScript and bundled with Parcel/Babel.
   - [ ] toContain()
 
 - Test length of a array
-  - [ ] toHaveLength()
+  - [x] toHaveLength()
 
 - Test emptyness of an array
   - [ ] toBeEmpty()
