@@ -56,4 +56,72 @@ describe('Test of simple assertions', () => {
     const testArray = [1, 2, 3];
     return expect(testArray).toHaveLength(2);
   });
+
+
+  it('Should have type string when pass string', () => {
+    return expect('test').toBeType('string');
+  });
+  it('Should have type string when pass string', () => {
+    return expect(1).toBeType('string');
+  });
+  it('Should NOT have type string when pass string', () => {
+    return expect(1).toNotBeType('string');
+  });
+  it('Should NOT have type string when pass string', () => {
+    return expect('test').toNotBeType('string');
+  });
+
+
+  it('Should have world in a string Hello World', () => {
+    return expect('Hello World').toContain('world');
+  });
+  it('Should have world in a string Hello World', () => {
+    return expect('Hello World').toContain('test');
+  });
+
+
+  it('Should array length of an array with 0 values be empty', () => {
+    const arrayTest = [];
+    return expect(arrayTest).toBeEmpty();
+  });
+  it('Should array length of an array with 0 values be empty', () => {
+    const arrayTest = [1, 2, 3];
+    return expect(arrayTest).toBeEmpty();
+  });
+
+
+  it('Should find and match in the string with regex', () => {
+    return expect('For more information, see Chapter 3.4.5.1').toMatch(/(chapter \d+(\.\d)*)/i);
+  });
+  it('Should find and match in the string with regex', () => {
+    return expect('Test').toMatch(/(chapter \d+(\.\d)*)/i);
+  });
+
+
+  it('Should the object have property name', () => {
+    const testObj = {
+      name: 'name'
+    }
+    return expect(testObj).toHaveProperty('name');
+  });
+  it('Should the object have property name', () => {
+    const testObj = {
+      surname: 'name'
+    }
+    return expect(testObj).toHaveProperty('name');
+  });
+
+
+  it('Should number 5 to be greater than 3', () => {
+    return expect(5).toBeGreaterThan(3);
+  });
+  it('Should number 5 to be greater than 3', () => {
+    return expect(2).toBeGreaterThan(3);
+  });
+  it('Should number 3 to be less than 5', () => {
+    return expect(3).toBeLessThan(5);
+  });
+  it('Should number  3 to be less than 5', () => {
+    return expect(5).toBeLessThan(3);
+  });
 });
