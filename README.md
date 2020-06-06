@@ -19,23 +19,23 @@ This framework is built with vanilla JavaScript and bundled with Parcel/Babel.
   - [x] toNotBeEqual()
 
 - Test typeof and instanceof (accepts string types and objects to use istanceof)
-  - [ ] toBeType()
-  - [ ] toNotBeType()
+  - [x] toBeType()
+  - [x] toNotBeType()
 
 - Test string with regex match
-  - [ ] toMatch()
+  - [x] toMatch()
 
 - Test indexOf of an array or string
-  - [ ] toContain()
+  - [x] toContain()
 
 - Test length of a array
   - [x] toHaveLength()
 
 - Test emptyness of an array
-  - [ ] toBeEmpty()
+  - [x] toBeEmpty()
 
 - Test if an object have a property
-  - [ ] toHaveProperty()
+  - [x] toHaveProperty()
 
 - Test if an object have some keys
   - [ ] toHaveKeys(arrayOfKeys)
@@ -47,5 +47,5 @@ This framework is built with vanilla JavaScript and bundled with Parcel/Babel.
   - [ ] toThrow()
 
 - Test if the number value if greater or less than other value
-  - [ ] toBeGreaterThan()
-  - [ ] toBeLessThan()
+  - [x] toBeGreaterThan()
+  - [x] toBeLessThan()
