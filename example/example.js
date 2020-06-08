@@ -124,4 +124,70 @@ describe('Test of simple assertions', () => {
   it('Should number  3 to be less than 5', () => {
     return expect(5).toBeLessThan(3);
   });
+
+
+  it('Should the functionn works well', () => {
+    const testFunction = (num1, num2) => {
+      return num1 + num2;
+    }
+    return expect(testFunction).toThrow(2, 4);
+  });
+  it('Should the functionn works well', () => {
+    const testFunctionError = () => {
+      throw new Error('teste');
+    }
+    return expect(testFunctionError).toThrow();
+  });
+
+
+  it('Should the object have some keys', () => {
+    const testObj = {
+      name: 'test',
+      adress: 'test',
+      phone: 'test'
+    }
+    return expect(testObj).toHaveKeys(['name', 'adress', 'phone']);
+  });
+  it('Should the object have some keys', () => {
+    const testObj = {
+      name: 'test',
+      adress: 'test',
+      phone: 'test'
+    }
+    return expect(testObj).toHaveKeys(['test']);
+  });
+
+  it('Should the object NOT have some keys', () => {
+    const testObj = {
+      name: 'test',
+      adress: 'test',
+      phone: 'test'
+    }
+    return expect(testObj).toNotHaveKeys(['test']);
+  });
+  it('Should the object NOT have some keys', () => {
+    const testObj = {
+      name: 'test',
+      adress: 'test',
+      phone: 'test'
+    }
+    return expect(testObj).toNotHaveKeys(['name']);
+  });
+
+  it('Should the object ONLY have some keys', () => {
+    const testObj = {
+      name: 'test',
+      adress: 'test',
+      phone: 'test'
+    }
+    return expect(testObj).toOnlyHaveKeys(['name', 'adress', 'phone']);
+  });
+  it('Should the object ONLY have some keys', () => {
+    const testObj = {
+      name: 'test',
+      adress: 'test',
+      phone: 'test'
+    }
+    return expect(testObj).toOnlyHaveKeys(['test']);
+  });
 });
