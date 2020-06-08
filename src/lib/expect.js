@@ -52,6 +52,54 @@ const expect = (assert) => {
     },
     toBeLessThan(expectValue){
       return testResponse(assert < expectValue, assert, `less than ${expectValue}`);
+    },
+    toThrow(...args){
+      let functionWorks = true;
+      let error = null;
+      try{
+        const result = assert(...args);
+      }
+      catch(e){
+        error = e;
+        functionWorks = false;
+      }
+      return testResponse(functionWorks, assert, `throws > ${error}`, true)
+    },
+    toHaveKeys(expectValue){
+      let haveKeys = false;
+      const objKeys = Object.keys(assert);
+      const keysFound = expectValue.filter(key => {
+        return objKeys.indexOf(key) !== -1
+      });
+
+      if(keysFound.length === expectValue.length)
+        haveKeys = true;
+
+      return testResponse(haveKeys, keysFound.length, objKeys.length);
+    },
+    toNotHaveKeys(expectValue){
+      let haveKeys = false;
+      const objKeys = Object.keys(assert);
+      const keysFound = expectValue.filter(key => {
+        return objKeys.indexOf(key) !== -1
+      });
+
+      if(keysFound.length !== expectValue.length)
+        haveKeys = true;
+
+      return testResponse(haveKeys, keysFound.length, expectValue.length, true);
+    },
+    toOnlyHaveKeys(expectValue){
+      let haveKeys = false;
+      const objKeys = Object.keys(assert);
+      const keysFound = expectValue.filter(key => {
+        return objKeys.indexOf(key) !== -1
+      });
+
+      if(keysFound.length === expectValue.length && objKeys.length === expectValue.length)
+        haveKeys = true;
+
+      return testResponse(haveKeys, keysFound.length, objKeys.length);
     }
   }
 }

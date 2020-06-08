@@ -38,13 +38,12 @@ This framework is built with vanilla JavaScript and bundled with Parcel/Babel.
   - [x] toHaveProperty()
 
 - Test if an object have some keys
-  - [ ] toHaveKeys(arrayOfKeys)
-  - [ ] toOnlyHaveKeys()
-  - [ ] toNotHaveKeys()
-  - [ ] toNotOnlyKeys()
+  - [x] toHaveKeys(arrayOfKeys)
+  - [x] toNotHaveKeys()
+  - [x] toOnlyHaveKeys()
 
 - Test if a function throw a error when executed
-  - [ ] toThrow()
+  - [x] toThrow()
 
 - Test if the number value if greater or less than other value
   - [x] toBeGreaterThan()
